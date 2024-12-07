@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shifts</title>
+</head>
+<body>
+    <h2>Shifts</h2>
+    <h3>Employee Shifts</h3>  <!-- Thêm tiêu đề cho bảng -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>employee</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for shift in shifts %}
+            <tr>
+                <td>{{ shift.department.name }}</td>
+                <td>{{ shift.employee.firstname }}</td>
+                <td>{{ shift.start_time }}</td>
+                <td>{{ shift.end_time }}</td>
+                <td>{{ shift.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
